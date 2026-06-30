@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Northstar Commerce</title>
+    <meta
+      name="description"
+      content="A polished e-commerce demo website with featured products, filters, and a cart experience."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">Northstar</a>
+      <nav class="nav-links">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <button class="cart-toggle" id="cartToggle" aria-label="Open cart">
+        Cart <span id="cartCount">0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">New season arrivals</p>
+          <h1>Shop smarter with premium essentials.</h1>
+          <p>
+            Discover curated fashion, accessories, and lifestyle pieces designed to elevate everyday living.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#products">Explore products</a>
+            <a class="btn btn-secondary" href="#about">Why choose us</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>4.9/5</strong>
+              <span>Rated by 12k shoppers</span>
+            </div>
+            <div>
+              <strong>24/7</strong>
+              <span>Support & delivery</span>
+            </div>
+            <div>
+              <strong>Free</strong>
+              <span>Shipping over $75</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="badge">Best seller</div>
+          <h3>Urban Explorer Case</h3>
+          <p>All-day comfort with weather-ready finish.</p>
+          <div class="hero-price">$89</div>
+          <button class="btn btn-primary add-to-cart" data-id="1">Add to cart</button>
+        </div>
+      </section>
+
+      <section class="categories" id="about">
+        <div class="section-heading">
+          <p class="eyebrow">Everything you need</p>
+          <h2>Curated for modern living</h2>
+        </div>
+        <div class="category-grid">
+          <article>
+            <h3>Tech Gear</h3>
+            <p>Minimal accessories and mobile essentials.</p>
+          </article>
+          <article>
+            <h3>Everyday Wear</h3>
+            <p>Comfort-focused pieces that transition effortlessly.</p>
+          </article>
+          <article>
+            <h3>Home Refresh</h3>
+            <p>Organize beautifully with thoughtful accents.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="products-section" id="products">
+        <div class="section-heading">
+          <p class="eyebrow">Featured collection</p>
+          <h2>Shop our favorites</h2>
+        </div>
+        <div class="filters">
+          <button class="filter active" data-filter="all">All</button>
+          <button class="filter" data-filter="tech">Tech</button>
+          <button class="filter" data-filter="fashion">Fashion</button>
+          <button class="filter" data-filter="home">Home</button>
+        </div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section class="benefits">
+        <article>
+          <h3>Fast delivery</h3>
+          <p>Same-day shipping for most metro areas.</p>
+        </article>
+        <article>
+          <h3>Secure checkout</h3>
+          <p>Encrypted payments with trusted providers.</p>
+        </article>
+        <article>
+          <h3>Easy returns</h3>
+          <p>30-day returns with no hassle on your first order.</p>
+        </article>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow">Loved by customers</p>
+          <h2>What shoppers are saying</h2>
+        </div>
+        <div class="review-grid">
+          <article>
+            <p>“The quality is premium and the experience felt effortless from start to finish.”</p>
+            <strong>— Maya, Austin</strong>
+          </article>
+          <article>
+            <p>“I found exactly what I needed in one place and checkout took minutes.”</p>
+            <strong>— Jordan, Chicago</strong>
+          </article>
+          <article>
+            <p>“Beautiful products, quick shipping, and support that actually responds.”</p>
+            <strong>— Elise, Seattle</strong>
+          </article>
+        </div>
+      </section>
+
+      <section class="newsletter">
+        <h2>Join the list for early access.</h2>
+        <form>
+          <input type="email" placeholder="Enter your email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="cart-header">
+        <h3>Your cart</h3>
+        <button id="closeCart">×</button>
+      </div>
+      <div class="cart-items" id="cartItems"></div>
+      <div class="cart-footer">
+        <div class="cart-total">
+          <span>Total</span>
+          <strong id="cartTotal">$0</strong>
+        </div>
+        <button class="btn btn-primary full-width">Checkout</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <footer>
+      <p>© 2026 Northstar Commerce. Built for a polished demo experience.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
