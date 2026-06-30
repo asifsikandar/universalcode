@@ -1,14 +1,14 @@
 :root {
   color-scheme: light;
-  --bg: #f7f4ee;
-  --surface: #ffffff;
-  --surface-2: #f1e9dc;
-  --text: #1e1a17;
-  --muted: #6f665f;
-  --accent: #1f6feb;
-  --accent-2: #132f5c;
-  --border: #e9e0d2;
-  --shadow: 0 20px 45px rgba(19, 47, 92, 0.12);
+  --bg: #f8f2ea;
+  --surface: #fffdf9;
+  --surface-2: #f3e3d3;
+  --text: #2f2a24;
+  --muted: #6f655c;
+  --accent: #c96b4a;
+  --accent-2: #2f5f4f;
+  --border: #e8d9cb;
+  --shadow: 0 20px 45px rgba(47, 95, 79, 0.12);
 }
 
 * {
@@ -18,7 +18,7 @@
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: linear-gradient(180deg, #f9f6f0 0%, var(--bg) 100%);
+  background: linear-gradient(135deg, #fcf7f0 0%, var(--bg) 100%);
   color: var(--text);
 }
 
@@ -40,9 +40,9 @@ input {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 1.5rem;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 253, 249, 0.9);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(47, 95, 79, 0.08);
 }
 
 .brand {
@@ -177,7 +177,7 @@ main {
 .badge {
   display: inline-block;
   padding: 0.4rem 0.7rem;
-  background: #eaf3ff;
+  background: #fbe8de;
   color: var(--accent);
   border-radius: 999px;
   font-size: 0.8rem;
@@ -252,7 +252,7 @@ main {
   width: 100%;
   min-height: 140px;
   border-radius: 16px;
-  background: linear-gradient(135deg, #eef6ff 0%, #f7efe5 100%);
+  background: linear-gradient(135deg, #f7eadf 0%, #e8f2eb 100%);
   font-size: 3rem;
   margin-bottom: 1rem;
 }
